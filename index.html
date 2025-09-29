@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grande École Ivoirienne | Excellence Académique</title>
+    <meta name="description" content="Institution d'enseignement supérieur d'excellence en Côte d'Ivoire">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0055A4",  // Bleu institutionnel
+                        secondary: "#1E3A8A", // Bleu marine
+                        accent: "#0077B6",   // Bleu clair
+                        light: "#F8FAFC"     // Bleu très clair
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 85, 164, 0.88), rgba(0, 85, 164, 0.88)), 
+                        url('images/hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .academic-card {
+            border-left: 4px solid #0077B6;
+            transition: transform 0.3s ease;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .flag-icon {
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(90deg, #F77F00 33%, #FFFFFF 33%, #FFFFFF 66%, #1A5F23 66%);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            border: 1px solid #EEE;
+        }
+    </style>
+</head>
+<!-- Menu flottant transparent -->
+<header class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-6xl px-6 py-4 rounded-full bg-white shadow-lg border border-gray-200">
+    <div class="flex justify-between items-center">
+        <!-- Logo personnalisé -->
+        <div class="flex items-center">
+            <img src="images/logo.png" alt="Logo Institut Aurels" class="h-10 w-auto mr-4">
+            <div>
+                <div class="text-xl font-bold text-primary">INSTITUT AURELS</div>
+            </div>
+        </div>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:block">
+            <ul class="flex space-x-8 text-sm font-semibold text-primary">
+                <li><a href="#home" class="hover:text-secondary transition">ACCUEIL</a></li>
+                <li><a href="#about" class="hover:text-secondary transition">L'INSTITUTION</a></li>
+                <li><a href="#programs" class="hover:text-secondary transition">PROGRAMMES</a></li>
+                <li><a href="#admissions" class="hover:text-secondary transition">ADMISSIONS</a></li>
+                <li><a href="#contact" class="hover:text-secondary transition">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- Menu Mobile Icon -->
+        <button class="md:hidden text-2xl text-primary">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+    <!-- Hero Section Prestige -->
+    <section id="home" class="hero-section min-h-screen flex items-center text-white">
+    <div class="container mx-auto px-6 py-20 text-center scroll-animation">
+        <div class="mb-8">
+            <span class="bg-white text-primary px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
+                Ici commence votre légende
+            </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
+            BIENVENUE <br>à l'Institut de Technologie Aurels
+        </h1>
+        <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto">
+            Formons ensemble les leaders qui façonneront l'avenir de la Côte d'Ivoire et de l'Afrique
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#admissions" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                POSTULER MAINTENANT
+            </a>
+            <a href="https://wa.me/225XXXXXXXXX" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                <i class="fab fa-whatsapp mr-2"></i> NOUS CONTACTER
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- À propos - Version Prestige -->
+    <section id="about" class="py-20 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">NOTRE INSTITUTION</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Fièrement ivoirienne, résolument africaine, résolument tournée vers l'excellence</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center mb-20">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12 scroll-animation">
+                    <div class="relative">
+                        <img src="images/campus.png" alt="Campus de l'école" class="rounded-lg shadow-xl w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-lg w-3/4">
+                            <div class="text-3xl font-bold mb-2">1985</div>
+                            <div class="text-sm">Année de fondation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 scroll-animation">
+                    <div class="bg-white p-8 rounded-xl shadow-md academic-card">
+                        <h3 class="text-2xl font-bold text-primary mb-6">UNE HISTOIRE D'EXCELLENCE</h3>
+                        <p class="mb-6">Ce n’est ni une simple question d’étude, ni un jeu de hasard. C’est un cheminement stratégique, un commencement sans limite. C’est une vision réinventée.
+
+Nous ne nous contentons pas de former. Nous accompagnons chaque membre de l’élite, nous assistons chaque rêveur, chaque leader, chaque penseur, car nous croyons fermement que chacun d’eux est unique.
+
+Ensemble, nous redéfinissons l’école — au-delà des esprits, au-delà des frontières, vers une éducation incarnée, ambitieuse, et profondément humaine.</p>
+                        <p class="mb-6">Notre campus situé à Abobo, allie un environnement digital d’excellence et innovations pédagogiques pour répondre aux défis du 21ème siècle.</p>
+                        
+                        <div class="grid grid-cols-3 gap-4 mt-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">92%</div>
+                                <div class="text-sm text-gray-600">Insertion professionnelle</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">20+</div>
+                                <div class="text-sm text-gray-600">Partenariats internationaux</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary">A+</div>
+                                <div class="text-sm text-gray-600">Accréditation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valeurs académiques -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md academic-card scroll-animation">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">EXIGENCE ACADÉMIQUE</h3>
+                    <p class="text-gray-600">Un corps professoral d'exception et des standards éducatifs parmi les plus élevés de Côte d'Ivoire.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md academic-card scroll-animation">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">ENRACINEMENT IVOIRIEN</h3>
+                    <p class="text-gray-600">Des programmes adaptés aux réalités économiques et culturelles de la Côte d'Ivoire et de la sous-région.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md academic-card scroll-animation">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-primary">OUVERTURE INTERNATIONALE</h3>
+                    <p class="text-gray-600">Réseaux universitaires mondiaux et programmes d'échanges avec les meilleures institutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Académiques -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">NOS PROGRAMMES D'EXCELLENCE</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+                <p class="mt-6 max-w-3xl mx-auto text-gray-600">Des formations complètes adaptées aux besoins des entreprises ivoiriennes et africaines</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programme 1 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg scroll-animation academic-card">
+                    <div class="h-48 bg-primary flex items-end p-6 relative">
+                        <div class="absolute top-4 right-4 bg-white text-primary text-xs font-bold px-3 py-1 rounded-full">DIPLÔME D'ÉTAT</div>
+                        <h3 class="text-xl font-bold text-white">LICENCE EN MANAGEMENT</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-bold text-secondary">BAC+3</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded"> CRÉDITS ECTS</span>
+                        </div>
+                        <p class="mb-6 text-gray-600">Formation fondamentale en gestion avec spécialisation en 3ème année.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Parcours francophone/anglophone</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Stage de 6 mois en entreprise</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Option entrepreneuriat</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-primary font-bold flex items-center text-sm">
+                            DÉTAILS DU PROGRAMME <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Programme 2 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-lg scroll-animation academic-card">
+                    <div class="h-48 bg-primary flex items-end p-6 relative">
+                        <div class="absolute top-4 right-4 bg-white text-primary text-xs font-bold px-3 py-1 rounded-full">ACCÉDITATION INTERNATIONALE</div>
+                        <h3 class="text-xl font-bold text-white">MASTER EN FINANCE</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-bold text-secondary">BAC+5</span>
+                            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded"> CRÉDITS ECTS</span>
+                        </div>
+                        <p class="mb-6 text-gray-600">Formation d'expertise en finance d'entreprise et marchés africains.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Option finance islamique</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Certification CFA préparatoire</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                <span>Double diplôme possible</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-primary font-bold flex items-center text-sm">
+                            DÉTAILS DU PROGRAMME <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Programme 3 -->
+<div class="bg-light rounded-xl overflow-hidden shadow-lg scroll-animation academic-card">
+    <div class="h-48 bg-primary flex items-end p-6 relative">
+        <div class="absolute top-4 right-4 bg-white text-primary text-xs font-bold px-3 py-1 rounded-full">EXECUTIVE EDUCATION</div>
+        <h3 class="text-xl font-bold text-white">MBA EXÉCUTIF</h3>
+    </div>
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-sm font-bold text-secondary">BAC+6</span>
+            <span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">18 MOIS</span>
+        </div>
+        <p class="mb-6 text-gray-600">Programme pour dirigeants et cadres supérieurs en activité.</p>
+        <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                <span>Format modular (1 semaine/mois)</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                <span>Cohorte internationale</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                <span>Mission consulting en entreprise</span>
+            </li>
+        </ul>
+        <a href="#" class="text-primary font-bold flex items-center text-sm">
+            DÉTAILS DU PROGRAMME <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+</div>
+
+<div class="mt-12 text-center scroll-animation">
+    <a href="https://www.aurels.org/formation/" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+        DÉCOUVRIR TOUS NOS PROGRAMMES
+    </a>
+</div>
+</div>
+</section>
+
+
+    <!-- Section Admissions -->
+    <section id="admissions" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 scroll-animation">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">PROCÉDURE D'ADMISSION</h2>
+                    <div class="w-24 h-1 bg-white mx-auto"></div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl p-8 text-gray-800 scroll-animation">
+                    <h3 class="text-2xl font-bold text-primary mb-6">REJOIGNEZ NOTRE COMMUNAUTÉ ACADÉMIQUE</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-primary mb-4">EXIGENCES</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                    <span>Dossier académique complet</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                    <span>Entretien de sélection</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                                    <span>Test d'aptitude (selon programme)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-4">CALENDRIER</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="far fa-calendar-alt text-secondary mr-2 mt-1"></i>
+                                    <span>Rentrée principale : Octobre</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="far fa-calendar-alt text-secondary mr-2 mt-1"></i>
+                                    <span>Rentrée décalée : Janvier</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="far fa-clock text-secondary mr-2 mt-1"></i>
+                                    <span>Dépôt des dossiers : 6 mois avant</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                            NOUS CONTACTER SUR WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Prestige -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <circle cx="15" cy="15" r="14" fill="white"/>
+                            <path d="M15 8L18 12H22L16 17L19 25L15 22L11 25L14 17L8 12H12L15 8Z" fill="#0055A4"/>
+                            <circle cx="15" cy="15" r="4" fill="#1E3A8A"/>
+                        </svg>
+                        <div>
+                            <div class="font-bold">INSTITUT DE TECHNOLOGIE AURELS</div>
+                            <div class="text-xs">EXCELLENCE ACADÉMIQUE</div>
+                        </div>
+                    </div>
+                    <p class="text-sm mb-4">Établissement d'enseignement supérieur reconnu par l'État</p>
+                    <div class="text-sm">
+                        <div>ABOBO, PK18 CITE CONCORDE 2</div>
+                        <div>Abidjan, Côte d'Ivoire</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-wider">Formations</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-gray-300 transition">Licences</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">Masters</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">MBA</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">Formations continues</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-wider">Recherche</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-gray-300 transition">Laboratoires</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">Publications</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">Colloques</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition">Chaires</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-wider">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mr-2 mt-1 text-secondary"></i>
+                            <span>+225 07 48 58 85 31</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1 text-secondary"></i>
+                            <span>contact@grandeecole.ci</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mr-2 mt-1 text-secondary"></i>
+                            <span>+225 48 58 85 31</span>
+                        </li>
+                        <li class="mt-4">
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/TON_LIEN_ICI" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com/TON_TWITTER_ICI" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.facebook.com/TON_LIEN_ICI" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.youtube.com/TON_LIEN_ICI" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0 text-sm">
+                        © 2024 Grande École Ivoirienne - Tous droits réservés
+                    </div>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="hover:text-gray-300 transition">Mentions légales</a>
+                        <a href="#" class="hover:text-gray-300 transition">Confidentialité</a>
+                        <a href="#" class="hover:text-gray-300 transition">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            
+            const elementInView = (el) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            };
+            
+            const displayScrollElement = (element) => {
+                element.classList.add('animate');
+            };
+            
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+            
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>
